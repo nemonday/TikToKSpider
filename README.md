@@ -5,30 +5,4 @@
 此爬虫思路仅供参考，还有更好的方法欢迎交流
 
 
-# 数据库ddl
-
-CREATE TABLE `work` (
-  `id` bigint(50) NOT NULL COMMENT '用户id',
-  `url` varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求地址',
-  `Host` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `Connection` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `x_Tt_Token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `x_tt_trace_id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `Accept_Encoding` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `Cookie` varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `X_Khronos` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `X_Gorgon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '请求头参数',
-  `user_name` binary(255) DEFAULT NULL COMMENT '用户名字',
-  `status` int(11) DEFAULT '0',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
-
-
-CREATE TABLE `video` (
-  `id` bigint(50) NOT NULL AUTO_INCREMENT,
-  `title` binary(255) DEFAULT NULL COMMENT '作品名字',
-  `nickname` binary(255) DEFAULT NULL COMMENT '作者名字',
-  `aweme_id` bigint(50) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3407 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 
